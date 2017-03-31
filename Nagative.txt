@@ -1,0 +1,13 @@
+import numpy as np
+import cv2
+    
+# Load an color image in grayscale
+img = cv2.imread('sample.jpg',0)
+
+for i in range(0, img.shape[0]):
+	for j in range(0, img.shape[1]):
+		img[i][j] = 255 - img[i][j]
+
+cv2.imshow('image',img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
